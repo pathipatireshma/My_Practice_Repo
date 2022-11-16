@@ -1,0 +1,73 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class sample_operations {
+    public static void main(String args[]) throws IOException {
+        String text = "I am learning cloud DevOps and Java programming";
+
+        String[] Split_Text = text.split(" ");
+        System.out.print("Split_Text = ");
+        for (int i=0;i<Split_Text.length;++i){
+            System.out.print(Split_Text[i] + "\n");
+        }
+        String new_text = "I am cloud Engineer";
+        String concatStr = text.concat(new_text);
+        System.out.println("\n"+"Concatenated_Text :" +concatStr );
+        //String[] Concatenated_Text = new String[0];
+
+        //        System.out.println("\n"+"Replaced-TexT :" + text.replace(" ",","));
+       // String new_str = String.valueOf(concatStr);
+       String[] strSplit = concatStr.split("cloud");
+        System.out.println("strSplit :"+strSplit);
+//        for (String new_str1 : strSplit){
+//            System.out.println(new_str1);
+//        }
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader bR = new BufferedReader(isr);
+        Scanner sr = new Scanner(System.in);
+        System.out.println("Enter Word -");
+        String Word  = bR.readLine();
+//        String Word = bR.readLine();
+        String[] splitNewStr = concatStr.split(" ");
+        int counter = 0;
+        System.out.println(splitNewStr);
+        for(String value : splitNewStr) {
+            if (value == Word.toString()) {
+                counter = counter + 1;
+            }
+        }
+        System.out.println("Count of Word :"  +counter);
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   if (Character.isLetter(characters[i]) && i != endOfLine) {
+                    isWord = true;
+
+                } else if (!Character.isLetter(characters[i]) && isWord) {
+                    counter++;
+                    isWord = false;
+
+                } else if (Character.isLetter(characters[i]) && i == endOfLine) {
+                    counter++;
+                }
