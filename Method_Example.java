@@ -1,25 +1,37 @@
 public class Method_Example {
-    public void add(){
+
+    public static void add(){
         int a = 5;
         int b = 6;
         int add = a + b;
-        System.out.println(add);
+        System.out.println("Add :" + add);
     }
-    public void sub(int a , int b){
+    public static void sub(int a , int b){
         int sub;
         sub = a - b;
-        System.out.println(sub);
+       System.out.println("Sub :" +sub);
     }
-    public int mul(){
+    public static int mul(){
         int  a , b;
         a = 5;
         b = 3;
         int mul = a * b;
         return mul;
     }
-    public int div(int a , int b){
+    public static int div(int a , int b){
         int div;
         div = a / b;
-        System.out.println(div);
+//        System.out.println(div);
+        return div;
+    }
+    public static void main(String args[]){
+        int a = 6;
+        int b = 4;
+        add();
+        sub(a,b);
+        int mul = mul();
+        int div = div(a,b);
+
+        System.out.println("\nMul :" + mul + "\nDiv :" + div);
     }
 }
