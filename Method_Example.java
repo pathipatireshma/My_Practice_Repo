@@ -9,7 +9,7 @@ public class Method_Example {
     public static void sub(int a , int b){
         int sub;
         sub = a - b;
-       System.out.println("Sub :" +sub);
+        System.out.println("Sub :" +sub);
     }
     public static int mul(){
         int  a , b;
