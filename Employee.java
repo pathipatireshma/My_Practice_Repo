@@ -41,36 +41,39 @@ class Emp_IncomeInfo {
 }
 
 public class Employee {
-
         public static void main(String args[]) {
-            String Company_Name = "\t\t CAPGEMINI \n\t\t\t HYDERABAD \n\t\t Employee-Details";
             EmployeeDetails emp = new EmployeeDetails();
             Emp_IncomeInfo emp_info = new Emp_IncomeInfo();
 
             String empInfo_emp1 = emp.getEmployeedetails("101", "Reshma", "24-June-2022", "Hyderabad", "9959996264");
-//            Integer emp_ctc = emp_info.getEmp_IncomeInfo();
-//            String emp_ctc_str = emp_info.emp_ctc.toString();
+
             String Income_Info1 = emp_info.Emp_Income_Classification(100000);
-            String Income_Info2 = emp_info.Emp_Income_Classification(200000);
+            pattern(empInfo_emp1,Income_Info1);
+
 
 
             String empInfo_emp2 = emp.getEmployeedetails("102", "Harini", "20-June-2022", "Hyderabad", "9959996264");
+            String Income_Info2 = emp_info.Emp_Income_Classification(200000);
 
 
-            System.out.println("\t" + Company_Name + "\nEmp1_Details :" + "\n\t"+empInfo_emp1 + "\t" + Income_Info1 + "\nEmp2_Details :" + "\n\t"+empInfo_emp2 + "\t" + Income_Info2);
+          //  System.out.println( "\nEmp1_Details :" + "\n\t"+empInfo_emp1 + "\t" + Income_Info1 + "\nEmp2_Details :" + "\n\t"+empInfo_emp2 + "\t" + Income_Info2);
 
         }
-    public void pattern() {
+    public static void pattern(String empInfo, String Income) {
+        String companyName = "\t\tCapGemini IT Services";
+        String companyAdd = "Gachibowli, Hyd, 500032";
 
-        for (int i = 1; i <= 10; i++) {
-            for (int j = 1; j <= 10; j++) {
-                if (i == 1 || i == 10 || j == 1 || j == 10) {
-                    System.out.println("*");
-                } else {
-                    System.out.print("  ");
-                }
+        for (int i = 1; i <= 25; i++) {
+            System.out.print(" *");
+        }
+        for (int i = 1; i <= 15; i++) {
+            System.out.print("\n*");
+            if(i ==1){
+                System.out.println(companyName);
+            }else if(i == 2) {
+                System.out.println(companyAdd);
             }
-            System.out.println();
+
         }
     }
 }
