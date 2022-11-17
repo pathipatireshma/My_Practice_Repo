@@ -38,9 +38,12 @@ class Emp_IncomeInfo {
         return  "\n\t Total_CTC : " + ctcstr + "\n\t Base_Salary :" + base_salstr + "\n\t House Rent Allowance :" + hrastr + "\n\t Special Allowance :" + specialallowancestr;
         }
 
-    }
+}
+
 public class Employee {
+
         public static void main(String args[]) {
+            String Company_Name = "\t\t CAPGEMINI \n\t\t\t HYDERABAD \n\t\t Employee-Details";
             EmployeeDetails emp = new EmployeeDetails();
             Emp_IncomeInfo emp_info = new Emp_IncomeInfo();
 
@@ -54,8 +57,20 @@ public class Employee {
             String empInfo_emp2 = emp.getEmployeedetails("102", "Harini", "20-June-2022", "Hyderabad", "9959996264");
 
 
-
-            System.out.println("Emp1_Details :" + "\n\t"+empInfo_emp1 + "\t" + Income_Info1 + "\nEmp2_Details :" + "\n\t"+empInfo_emp2 + "\t" + Income_Info2);
+            System.out.println("\t" + Company_Name + "\nEmp1_Details :" + "\n\t"+empInfo_emp1 + "\t" + Income_Info1 + "\nEmp2_Details :" + "\n\t"+empInfo_emp2 + "\t" + Income_Info2);
 
         }
+    public void pattern() {
+
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                if (i == 1 || i == 10 || j == 1 || j == 10) {
+                    System.out.println("*");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
