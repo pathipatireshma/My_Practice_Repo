@@ -61,7 +61,10 @@ public class Employee {
         }
     public static void pattern(String empInfo, String Income) {
         String companyName = "\t\tCapGemini IT Services";
-        String companyAdd = "Gachibowli, Hyd, 500032";
+        String companyAdd = "\tGachibowli, Hyderabad, 500032";
+//        int size = 25;
+        int boundry = 25;
+        int flag = 1;
 
         for (int i = 1; i <= 25; i++) {
             System.out.print(" *");
@@ -75,5 +78,12 @@ public class Employee {
             }
 
         }
+        for (int j = 1; j <= 25; j++){
+            System.out.print(" *");
+        }
+//        for (int i = 25; j >= 15; j++){
+//            System.out.print("\n*");
+//        }
+
     }
 }
